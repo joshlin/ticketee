@@ -11,7 +11,7 @@ Ticketee::Application.routes.draw do
   # This route can be invoked with purchase_url(:id => product.id)
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
-    resources :projects
+    #resources :projects
 
   # Sample resource route with options:
   #   resources :products do
@@ -26,10 +26,9 @@ Ticketee::Application.routes.draw do
   #   end
 
   # Sample resource route with sub-resources:
-  #   resources :products do
-  #     resources :comments, :sales
-  #     resource :seller
-  #   end
+     resources :projects do
+       resources :tickets       
+     end
 
   # Sample resource route with more complex sub-resources
   #   resources :products do
