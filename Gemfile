@@ -42,7 +42,8 @@ group :test do
   gem 'cucumber-rails', '1.0.6'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl'  
+  gem 'factory_girl'
+  gem 'email_spec'  
 end
 
 gem 'devise', '~> 1.4.3'
