@@ -1,6 +1,10 @@
 <%= form_for [:admin, @user] do |f| %>
 <%= f.error_messages %>
 <p>
+  <%= f.check_box :admin %>
+  <%= f.label :admin, "Is an admin?" %>
+</p>
+<p>
   <%= f.label :email %>
   <%= f.text_field :email %>
 </p>
