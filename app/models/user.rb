@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+has_many :permissions
 #validates_uniqueness_of :email
 #validates :email, :email_format => true
   # Include default devise modules. Others available are:
