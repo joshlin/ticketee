@@ -3,6 +3,7 @@ before_filter :authenticate_user!
 before_filter :find_project
 before_filter :find_ticket, :only => [:show, :edit, :update, :destroy]
 before_filter :authorize_create!, :only => [:new, :create]
+before_filter :authorize_update!, :only => [:edit, :update]
 
 	def new
 		@ticket = @project.tickets.build
@@ -62,5 +63,13 @@ private
         redirect_to @project
       end
     end
+
+    def authorize_update!
+	  if !current_user.admin? && cannot?(:"edit tickets", @project)
+		flash[:alert] = "You cannot edit tickets on this project."
+		redirect_to @project
+	  end
+	end
+
 
 end
