@@ -48,4 +48,5 @@ end
 
 gem 'devise', '~> 1.4.3'
 gem 'cancan'
+gem 'paperclip'
 gem 'client_side_validations'
