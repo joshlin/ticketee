@@ -31,6 +31,8 @@ Ticketee::Application.routes.draw do
        resources :tickets       
      end
 
+     resources :files
+     
   # Sample resource route with more complex sub-resources
   #   resources :products do
   #     resources :comments
