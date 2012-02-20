@@ -43,7 +43,8 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'factory_girl'
-  gem 'email_spec'  
+  gem 'email_spec'
+  gem 'launchy'
 end
 
 gem 'devise', '~> 1.4.3'
