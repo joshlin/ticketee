@@ -24,6 +24,7 @@ before_filter :authorize_delete!, :only => :destroy
 
 	def show
 		@comment = @ticket.comments.build
+		@states = State.all
 	end
 
 	def edit

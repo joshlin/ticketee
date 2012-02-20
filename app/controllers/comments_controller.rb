@@ -8,10 +8,11 @@ class CommentsController < ApplicationController
 		flash[:notice] = "Comment has been created."
 		redirect_to [@ticket.project, @ticket]
 	else
+		@states = State.all
 		flash[:alert] = "Comment has not been created."		
 		render :template => "tickets/show"
 	end
-   end
+  end
 
 private
 

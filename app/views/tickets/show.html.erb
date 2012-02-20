@@ -13,6 +13,7 @@
 
 
   <br><small>Created by <%= @ticket.user.email %></small>
+  <%= render @ticket.state if @ticket.state %>
   <%= simple_format(@ticket.description) %>
 
   <% if @ticket.assets.exists? %>
