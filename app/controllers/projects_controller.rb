@@ -9,6 +9,7 @@ before_filter :find_project, :only => [:show, :edit, :update, :destroy]
 
   def show
   	@project = Project.find(params[:id])
+    @tickets = @project.tickets
   end
   
   def new

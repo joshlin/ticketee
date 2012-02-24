@@ -28,7 +28,11 @@ Ticketee::Application.routes.draw do
 
   # Sample resource route with sub-resources:
      resources :projects do
-       resources :tickets       
+        resources :tickets do
+          collection do
+            get :search
+          end
+        end
      end
   
     resources :tickets do
