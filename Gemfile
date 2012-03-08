@@ -36,6 +36,7 @@ group :test, :development do
   #gem 'turn', '~> 0.8.3', :require => false
   gem 'rspec-rails', '~> 2.5'
   gem 'itslog'
+  gem 'gmail'
 end
 
 group :test do
